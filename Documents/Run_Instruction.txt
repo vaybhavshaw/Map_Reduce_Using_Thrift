@@ -1,0 +1,26 @@
+Running the Code
+We created a config.file which specifies the following:
+First line mentions the scheduling policy. (0-Random 1-Load Balancing)
+Second line mentions the port numbers. (9106-Client-Server, 9107-Server-WorkerNode) which is separated by a single space
+From third line on, each line has a description of the hostnames and load value of each WorkerNode, separated by a single space.
+(e.g csel-kh4250-06.cselabs.umn.edu 0.2) 
+Note: All the values are separated by a single space.
+
+
+To run the code, we need to follow the following steps:
+(Everything needs to be run from the directory in which the files are present)
+
+We first compile the project using the following syntax :
+javac -cp ".:/usr/local/Thrift/*" *.java -d .
+
+Then we ssh into the WorkerNodes mention in the config file by ssh-ing into the CSE lab machines. For example, we ssh on 4 machines for running 4 individual worker nodes. 
+
+We then run the WorkerNodes individually using the following command
+java -cp ".:/usr/local/Thrift/*" WorkerNode
+
+We then run the Server on the local node using:
+java -cp ".:/usr/local/Thrift/*" Server
+
+Next, we then run the Client on the local node to run the entire Map-Reduce functionality:
+java -cp ".:/usr/local/Thrift/*" Client
+
