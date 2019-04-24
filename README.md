@@ -43,13 +43,13 @@ writes the final output to the output directory.
 
 ## 4. Running the Code
 We created a config.file which specifies the following:
-1. First line mentions the scheduling policy. (0-Random 1-Load Balancing)
-2. Second line mentions the port numbers. (9106-Client-Server, 9107-Server-WorkerNode)
+First line mentions the scheduling policy. (0-Random 1-Load Balancing)
+Second line mentions the port numbers. (9106-Client-Server, 9107-Server-WorkerNode)
 which is separated by a single space
-3. From third line on, each line has a description of the hostnames and load value of each
-WorkerNode, separated by a single space.
-(​e.g​ ​csel-kh4250-06.cselabs.umn.edu 0.2​)
+From third line onwards, each line has a description of the hostnames and load value of each
+WorkerNode, separated by a single space. (​e.g​ ​csel-kh4250-06.cselabs.umn.edu 0.2​)
 Note: All the values are separated by a single space.
+
 To run the code, we need to follow the following steps:
 (Everything needs to be run from the directory in which the files are present)
 1. We first compile the project using the following syntax :
